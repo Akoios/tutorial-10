@@ -38,7 +38,9 @@ jobs:
     - name: Deploy notebook service with Titan
       run: |
         ls -la ..
+        cat helloworld.ipynb
         cd ..
+        cat helloworld.ipynb
         ls -la ..
         echo $(pwd)
         echo "==> deploy"
