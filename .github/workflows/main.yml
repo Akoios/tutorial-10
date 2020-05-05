@@ -19,6 +19,7 @@ jobs:
         python-version: ${{ matrix.python-version }}
     - name: Linter
       run: |
+        cat hello.ipynb
         pip install flake8-nb
         flake8-nb hello.ipynb
 
