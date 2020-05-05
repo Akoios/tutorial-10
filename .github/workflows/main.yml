@@ -35,7 +35,7 @@ jobs:
     - name: Titan
       run: |
         curl -sf https://install.akoios.com/beta | sudo sh
-        titan deploy --image scipy ../helloworld.ipynb
+        titan deploy --image scipy helloworld.ipynb
       env:
           TITAN_LOGIN: ${{ secrets.TITAN_LOGIN }}
           TITAN_PASSWORD: ${{ secrets.TITAN_PASSWORD }}
