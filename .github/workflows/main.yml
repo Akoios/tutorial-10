@@ -34,8 +34,9 @@ jobs:
         python-version: ${{ matrix.python-version }}
     - name: Titan
       run: |
-       curl -sf https://install.akoios.com/beta | sudo sh
-        titan deploy --image scipy tutorial-10/helloworld.ipynb
+        pwd
+        curl -sf https://install.akoios.com/beta | sudo sh
+        titan deploy --image scipy helloworld.ipynb
       env:
           TITAN_LOGIN: ${{ secrets.TITAN_LOGIN }}
           TITAN_PASSWORD: ${{ secrets.TITAN_PASSWORD }}
