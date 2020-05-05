@@ -39,9 +39,9 @@ jobs:
       run: |
         ls -la .
         echo $(pwd)
-        cat helloworld.ipynb
+        cat hello.ipynb
         echo "==> deploy"
-        titan deploy --image scipy helloworld.ipynb
+        titan deploy --image scipy hello.ipynb
       env:
           TITAN_LOGIN: ${{ secrets.TITAN_LOGIN }}
           TITAN_PASSWORD: ${{ secrets.TITAN_PASSWORD }}
