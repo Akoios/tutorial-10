@@ -37,12 +37,9 @@ jobs:
         curl -sf https://install.akoios.com/beta | sudo sh
     - name: Deploy notebook service with Titan
       run: |
-        ls -la ..
-        cat helloworld.ipynb
-        cd ..
-        cat helloworld.ipynb
-        ls -la ..
+        ls -la .
         echo $(pwd)
+        cat helloworld.ipynb
         echo "==> deploy"
         titan deploy --image scipy helloworld.ipynb
       env:
