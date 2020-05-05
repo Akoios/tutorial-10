@@ -35,6 +35,7 @@ jobs:
     - name: Titan
       run: |
         pwd
+        ls -la
         curl -sf https://install.akoios.com/beta | sudo sh
         titan deploy --image scipy helloworld.ipynb
       env:
