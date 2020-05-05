@@ -32,14 +32,12 @@ jobs:
       uses: actions/setup-python@v1
       with:
         python-version: ${{ matrix.python-version }}
-    - name: Titan
+    - name: Install Titan CLI
       run: |
         curl -sf https://install.akoios.com/beta | sudo sh
+    - name: Deploy notebook service with Titan
+      run: |
         titan deploy --image scipy helloworld.ipynb
       env:
           TITAN_LOGIN: ${{ secrets.TITAN_LOGIN }}
           TITAN_PASSWORD: ${{ secrets.TITAN_PASSWORD }}
-
-
-
-
