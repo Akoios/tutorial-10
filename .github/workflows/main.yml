@@ -33,6 +33,7 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
     - name: Titan
+      working-directory: ./
       run: |
        curl -sf https://install.akoios.com/beta | sudo sh
         titan deploy --image scipy ./helloworld.ipynb
