@@ -42,7 +42,7 @@ jobs:
       run: |
         ls -la .
         echo $(pwd)
-        cat hello.ipynb
+        cat hello.py
         echo "==> deploy"
         titan deploy --image scipy hello.ipynb
       env:
